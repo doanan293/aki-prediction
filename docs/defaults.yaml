@@ -1,0 +1,13 @@
+# Cấu hình mặc định cho Pandoc để chuyển đổi sang Word (.docx)
+# Sử dụng bằng cách chạy (từ root): .venv/bin/pandoc --defaults docs/defaults.yaml docs/TabPFN3_DKA_AKI.md -o docs/TabPFN3_DKA_AKI.docx && python3 docs/post_process.py docs/TabPFN3_DKA_AKI.docx
+
+to: docx
+reference-doc: docs/custom-reference.docx
+toc: false
+toc-depth: 3
+metadata:
+  toc-title: "Mục lục"
+filters:
+  - docs/filter.lua
+resource-path:
+  - docs

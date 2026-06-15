@@ -1,0 +1,30 @@
+# Loại bỏ môi trường ảo cục bộ và cache
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.ipynb_checkpoints/
+.ruff_cache/
+.agents/
+.codex/
+
+# Loại bỏ lịch sử Git
+.git/
+.gitignore
+
+# Loại bỏ các tệp dữ liệu cục bộ, kết quả đầu ra và model checkpoint
+# (Nên mount ngoài qua Docker Volume để container có thể tái sử dụng cho nhiều bộ dữ liệu khác nhau)
+resource/
+output/
+
+# Loại bỏ các tệp cấu hình môi trường cục bộ
+.env
+
+# Loại bỏ tài liệu và test suite không cần thiết khi chạy production
+tests/
+docs/
+*.md
+samples/

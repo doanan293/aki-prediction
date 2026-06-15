@@ -1,0 +1,18 @@
+services:
+  pipeline:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: dka-aki-pipeline:latest
+    env_file:
+      - path: .env
+        required: false
+    command: >
+      sh -c "python main.py prepare-data &&
+             python main.py select-features &&
+             python main.py train &&
+             python main.py evaluate &&
+             python main.py predict"
+    volumes:
+      - ./resource:/app/resource
+      - ./output:/app/output

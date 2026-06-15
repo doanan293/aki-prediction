@@ -1,0 +1,61 @@
+<mxfile host="65bd71144e">
+    <diagram name="Page-1" id="0">
+        <mxGraphModel dx="1122" dy="438" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="A" value="" style="image;html=1;labelBackgroundColor=none;image=https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg;align=center;whiteSpace=wrap;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="60" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="A_text" value="&lt;div align=&quot;center&quot;&gt;&lt;b&gt;Đầu vào&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#718096&quot;&gt;Ma trận 970 x 52&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;strokeColor=none;fillColor=none;fontSize=13;fontColor=#2D3748;fontFamily=Helvetica;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="140" width="180" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="B" value="" style="image;html=1;labelBackgroundColor=none;image=https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg;align=center;whiteSpace=wrap;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="60" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="B_text" value="&lt;div align=&quot;center&quot;&gt;&lt;b&gt;Huấn luyện XGBoost nháp&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#718096&quot;&gt;Tối ưu hóa tham số&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;strokeColor=none;fillColor=none;fontSize=13;fontColor=#2D3748;fontFamily=Helvetica;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="140" width="180" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="C" value="" style="image;html=1;labelBackgroundColor=none;image=https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg;align=center;whiteSpace=wrap;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="60" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="C_text" value="&lt;div align=&quot;center&quot;&gt;&lt;b&gt;Tính trị số SHAP&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#718096&quot;&gt;Sử dụng TreeExplainer&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;strokeColor=none;fillColor=none;fontSize=13;fontColor=#2D3748;fontFamily=Helvetica;" parent="1" vertex="1">
+                    <mxGeometry x="420" y="140" width="180" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="D" value="" style="image;html=1;labelBackgroundColor=none;image=https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg;align=center;whiteSpace=wrap;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="680" y="60" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="D_text" value="&lt;div align=&quot;center&quot;&gt;&lt;b&gt;Xếp hạng đặc trưng&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#718096&quot;&gt;Sắp xếp điểm tuyệt đối&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;strokeColor=none;fillColor=none;fontSize=13;fontColor=#2D3748;fontFamily=Helvetica;" parent="1" vertex="1">
+                    <mxGeometry x="620" y="140" width="180" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="E" value="" style="image;html=1;labelBackgroundColor=none;image=https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg;align=center;whiteSpace=wrap;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="880" y="60" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="E_text" value="&lt;div align=&quot;center&quot;&gt;&lt;b&gt;Giữ lại đặc trưng&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#718096&quot;&gt;Lấy top 20 đặc trưng chính&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;strokeColor=none;fillColor=none;fontSize=13;fontColor=#2D3748;fontFamily=Helvetica;" parent="1" vertex="1">
+                    <mxGeometry x="820" y="140" width="180" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="F" value="" style="image;html=1;labelBackgroundColor=none;image=https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg;align=center;whiteSpace=wrap;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="1080" y="60" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="F_text" value="&lt;div align=&quot;center&quot;&gt;&lt;b&gt;Đầu ra&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#718096&quot;&gt;Ma trận 970 x 20&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;strokeColor=none;fillColor=none;fontSize=13;fontColor=#2D3748;fontFamily=Helvetica;" parent="1" vertex="1">
+                    <mxGeometry x="1020" y="140" width="180" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge_AB" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#4A5568;strokeWidth=1.5;" parent="1" source="A" target="B" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge_BC" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#4A5568;strokeWidth=1.5;" parent="1" source="B" target="C" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge_CD" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#4A5568;strokeWidth=1.5;" parent="1" source="C" target="D" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge_DE" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#4A5568;strokeWidth=1.5;" parent="1" source="D" target="E" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge_EF" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#4A5568;strokeWidth=1.5;" parent="1" source="E" target="F" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
