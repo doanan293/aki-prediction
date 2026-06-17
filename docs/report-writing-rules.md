@@ -4,8 +4,8 @@ Tài liệu này định nghĩa các quy chuẩn định dạng và hành văn b
 
 ## 1. Định dạng văn bản (Formatting)
 * **Không bôi đậm dưới mọi hình thức:** Tuyệt đối KHÔNG sử dụng cú pháp bôi đậm (`**` hoặc `__`) ở bất kỳ đâu trong toàn bộ tài liệu, bao gồm nội dung chính, tiêu đề, bảng biểu (kể cả tiêu đề cột), chú thích, v.v. Tất cả văn bản phải sử dụng định dạng chữ thường (regular).
-* **Đúng:** `Trọng số của BUN là lớn nhất trong mô hình.`
-* **Sai:** `Trọng số của **BUN** là lớn nhất trong mô hình.`
+* **Đúng:** `Yếu tố A có mức đóng góp lớn nhất trong mô hình.`
+* **Sai:** `Yếu tố **A** có mức đóng góp lớn nhất trong mô hình.`
 
 ## 2. Cấu trúc tiêu đề (Headings)
 * **Quy chuẩn đánh số tiêu đề:** Agent phải tự động đánh số thứ tự thủ công vào các tiêu đề Markdown theo cấu trúc phân cấp dưới đây. Không phụ thuộc vào bộ tự động đánh số của trình biên dịch.
@@ -17,7 +17,7 @@ Tài liệu này định nghĩa các quy chuẩn định dạng và hành văn b
   ```markdown
   # 1. Giới thiệu
   ## 1.1 Tổng quan về mô hình
-  ### 1.1.1 Thuật toán XGBoost
+  ### 1.1.1 Phương pháp phân tích
   ```
 * **Sai:**
   ```markdown
@@ -29,27 +29,27 @@ Tài liệu này định nghĩa các quy chuẩn định dạng và hành văn b
 * **Trình bày dạng đoạn văn mạch lạc:** Tuyệt đối KHÔNG sử dụng danh sách gạch đầu dòng (bullet points như `-`, `*`, `+`) hoặc danh sách đánh số tự động trong văn bản chính.
 * **Nguyên tắc viết:** Mọi ý kiến, danh sách hoặc quy trình phải được viết dưới dạng các câu hoàn chỉnh, liên kết logic và tổ chức thành các đoạn văn (paragraphs) mạch lạc.
 * **Đúng:**
-  `Mô hình XGBoost sử dụng các đặc trưng đầu vào quan trọng bao gồm BUN, lượng nước tiểu, cân nặng, tuổi tác và tiểu cầu.`
+  `Mô hình phân tích sử dụng các biến đầu vào quan trọng bao gồm biến A, biến B, biến C và biến D.`
 * **Sai:**
-  `Mô hình XGBoost sử dụng các đặc trưng đầu vào quan trọng sau:`
-  `- BUN`
-  `- Lượng nước tiểu`
-  `- Cân nặng`
+  `Mô hình phân tích sử dụng các biến đầu vào quan trọng sau:`
+  `- Biến A`
+  `- Biến B`
+  `- Biến C`
 
 ## 4. Phong cách diễn đạt (Style & Tone)
 * **Tính liên kết và xuyên suốt:** Văn phong học thuật, chuyên nghiệp, rõ ràng. Đảm bảo mạch lập luận logic chảy suốt từ đoạn này sang đoạn khác.
 * **Tránh diễn đạt rời rạc:** Không viết các câu ngắn cụt ngủn hoặc các ý rời rạc thiếu từ nối/liên kết ngữ nghĩa.
 
 ## 5. Quy tắc bảng biểu trong Markdown
-* **Caption bảng bắt buộc theo chuẩn Pandoc:** Mỗi bảng phải có caption dạng `Table: Bảng 1. Đặc điểm lâm sàng nền của hai nhóm bệnh nhân` để Pandoc có thể nhận diện và chuyển đổi nhất quán sang Word.
+* **Caption bảng bắt buộc theo chuẩn Pandoc:** Mỗi bảng phải có caption dạng `Table: Bảng 1. Tên bảng mô tả nội dung` để Pandoc có thể nhận diện và chuyển đổi nhất quán sang Word.
 * **Anchor ổn định cho danh mục bảng:** Nếu bảng xuất hiện trong danh mục bảng biểu hoặc được tham chiếu trong nội dung, đặt anchor ngay trước caption, ví dụ `<a id="bang-1"></a>`.
 * **Không bôi đậm trong bảng:** Tiêu đề cột, ô dữ liệu, dòng nhóm và chú thích trong bảng đều phải tuân thủ quy tắc không bôi đậm.
-* **Bảng phải có tiêu đề cột rõ nghĩa:** Tên cột cần đủ thông tin để người đọc hiểu nội dung mà không phải suy đoán, ví dụ `Tổng số (N = 970)`, `Không mắc AKI (n = 593)`, `Mắc AKI (n = 377)` và `Giá trị p`.
+* **Bảng phải có tiêu đề cột rõ nghĩa:** Tên cột cần đủ thông tin để người đọc hiểu nội dung mà không phải suy đoán, ví dụ `Tổng số (N = 970)`, `Nhóm A (n = 593)`, `Nhóm B (n = 377)` và `Giá trị p`.
 * **Không chia đều cột một cách máy móc:** Khi viết bảng nguồn, cần nhận diện cột nào chứa nhãn dài, cột nào chứa số liệu ngắn, cột nào chứa p-value. Việc căn chiều rộng cuối cùng được xử lý ở bước chuyển DOCX, nhưng cấu trúc bảng Markdown phải phản ánh đúng loại nội dung của từng cột.
 
 ## 6. Quy tắc trình bày p-value trong bảng đặc điểm nền
 * **Biến liên tục hoặc biến nhị phân:** Ghi p-value trực tiếp trên cùng dòng biến.
-* **Biến phân loại nhiều mức:** Chỉ ghi p-value tổng thể ở dòng biến cha, ví dụ `Chủng tộc`, `Phân loại đái tháo đường` hoặc `Bệnh thận mạn tính sẵn có`. Các dòng mức con như `Da trắng`, `Mỹ gốc Phi`, `Đái tháo đường típ 1` hoặc `Giai đoạn 1 đến 3` không được lặp lại p-value.
+* **Biến phân loại nhiều mức:** Chỉ ghi p-value tổng thể ở dòng biến cha, ví dụ `Nhóm phân loại`, `Loại đối tượng` hoặc `Mức độ phân tầng`. Các dòng mức con như `Mức 1`, `Mức 2`, `Nhóm con A` hoặc `Nhóm con B` không được lặp lại p-value.
 * **Không hiểu ô p-value trống là thiếu dữ liệu:** Ô p-value trống ở dòng mức con thể hiện rằng kiểm định được thực hiện cho toàn bộ biến phân loại, không phải kiểm định riêng từng mức con.
 * **Không lặp cùng một p-value xuống các dòng con:** Việc lặp p-value ở từng mức con dễ gây hiểu nhầm rằng từng dòng được kiểm định độc lập.
 

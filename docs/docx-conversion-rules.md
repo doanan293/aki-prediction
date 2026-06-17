@@ -16,11 +16,11 @@ Tài liệu này quy định các bước kỹ thuật bắt buộc khi chuyển
 
 ## 3. Quy tắc line break trong ô bảng
 * **`<br>` trong Markdown phải thành line break Word thật:** Sau chuyển đổi, kiểm tra trong `word/document.xml` để bảo đảm line break được biểu diễn bằng `w:br`.
-* **Bảng cấu hình mô hình:** Cột `Cấu hình tham số chính` phải hiển thị mỗi tham số trên một dòng. Ví dụ `model_path`, `device` và `random_state` phải nằm trên các dòng riêng.
+* **Bảng cấu hình hoặc tham số:** Cột chứa cấu hình, tham số hoặc thuộc tính kỹ thuật phải hiển thị mỗi mục trên một dòng. Ví dụ `tham_so_1`, `tham_so_2` và `tham_so_3` phải nằm trên các dòng riêng.
 * **Không chỉ dựa vào word wrap tự động:** Word wrap theo width cột không thay thế cho line break có chủ đích trong các ô cấu hình hoặc danh sách tham số.
 
 ## 4. Caption, sequence field và danh mục
-* **Caption bảng/hình phải chuyển thành sequence field:** Caption dạng `Bảng 1. Đặc điểm lâm sàng nền của hai nhóm bệnh nhân` và `Hình 4. Kiến trúc mô hình TabPFN-3-Plus` cần được hậu xử lý thành sequence field để danh mục bảng/hình hoạt động ổn định.
+* **Caption bảng/hình phải chuyển thành sequence field:** Caption dạng `Bảng 1. Tên bảng mô tả nội dung` và `Hình 1. Tên hình mô tả nội dung` cần được hậu xử lý thành sequence field để danh mục bảng/hình hoạt động ổn định.
 * **Danh mục không được tự động cập nhật gây lệch:** Nếu Word tự cập nhật field làm hỏng danh mục, cần tắt automatic field update trong settings hoặc dùng hậu xử lý đã kiểm soát.
 * **Bookmark thừa cần được loại bỏ:** Bookmark sinh ra trong quá trình chuyển đổi có thể làm danh mục hoặc field hoạt động không ổn định, nên được loại bỏ trong hậu xử lý nếu không cần thiết.
 
@@ -28,7 +28,7 @@ Tài liệu này quy định các bước kỹ thuật bắt buộc khi chuyển
 * **Kiểm tra DOCX là ZIP hợp lệ:** Chạy `unzip -t path/to/file.docx` và yêu cầu không có lỗi.
 * **Kiểm tra XML bảng:** Đọc `word/document.xml` để xác nhận số bảng, số cột, `tblGrid`, `tcW`, font size và số lượng `w:br` ở các bảng quan trọng.
 * **Convert sang PDF để kiểm tra render:** Dùng LibreOffice headless để chuyển DOCX sang PDF, sau đó render các trang có bảng chính bằng `pdftoppm`.
-* **Kiểm tra trực quan các bảng chính:** Bảng đặc điểm nền, bảng tỷ lệ khuyết thiếu, bảng cấu hình mô hình và hai bảng hiệu năng phải được kiểm tra bằng ảnh render hoặc mở trong Word/LibreOffice.
+* **Kiểm tra trực quan các bảng chính:** Các bảng nhiều cột, bảng có nhóm phân loại, bảng cấu hình tham số và bảng kết quả so sánh phải được kiểm tra bằng ảnh render hoặc mở trong Word/LibreOffice.
 * **Cảnh báo ảnh không đồng nghĩa lỗi DOCX:** Cảnh báo kiểu `libpng warning: zTXt: CRC error` thường liên quan metadata ảnh nhúng. Nếu conversion vẫn exit code 0 và PDF render được, cảnh báo này không phải lỗi cấu trúc DOCX.
 
 ## 6. Quan hệ với quy tắc viết báo cáo
