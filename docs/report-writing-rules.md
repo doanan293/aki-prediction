@@ -39,3 +39,27 @@ Tài liệu này định nghĩa các quy chuẩn định dạng và hành văn b
 ## 4. Phong cách diễn đạt (Style & Tone)
 * **Tính liên kết và xuyên suốt:** Văn phong học thuật, chuyên nghiệp, rõ ràng. Đảm bảo mạch lập luận logic chảy suốt từ đoạn này sang đoạn khác.
 * **Tránh diễn đạt rời rạc:** Không viết các câu ngắn cụt ngủn hoặc các ý rời rạc thiếu từ nối/liên kết ngữ nghĩa.
+
+## 5. Quy tắc bảng biểu trong Markdown
+* **Caption bảng bắt buộc theo chuẩn Pandoc:** Mỗi bảng phải có caption dạng `Table: Bảng 1. Đặc điểm lâm sàng nền của hai nhóm bệnh nhân` để Pandoc có thể nhận diện và chuyển đổi nhất quán sang Word.
+* **Anchor ổn định cho danh mục bảng:** Nếu bảng xuất hiện trong danh mục bảng biểu hoặc được tham chiếu trong nội dung, đặt anchor ngay trước caption, ví dụ `<a id="bang-1"></a>`.
+* **Không bôi đậm trong bảng:** Tiêu đề cột, ô dữ liệu, dòng nhóm và chú thích trong bảng đều phải tuân thủ quy tắc không bôi đậm.
+* **Bảng phải có tiêu đề cột rõ nghĩa:** Tên cột cần đủ thông tin để người đọc hiểu nội dung mà không phải suy đoán, ví dụ `Tổng số (N = 970)`, `Không mắc AKI (n = 593)`, `Mắc AKI (n = 377)` và `Giá trị p`.
+* **Không chia đều cột một cách máy móc:** Khi viết bảng nguồn, cần nhận diện cột nào chứa nhãn dài, cột nào chứa số liệu ngắn, cột nào chứa p-value. Việc căn chiều rộng cuối cùng được xử lý ở bước chuyển DOCX, nhưng cấu trúc bảng Markdown phải phản ánh đúng loại nội dung của từng cột.
+
+## 6. Quy tắc trình bày p-value trong bảng đặc điểm nền
+* **Biến liên tục hoặc biến nhị phân:** Ghi p-value trực tiếp trên cùng dòng biến.
+* **Biến phân loại nhiều mức:** Chỉ ghi p-value tổng thể ở dòng biến cha, ví dụ `Chủng tộc`, `Phân loại đái tháo đường` hoặc `Bệnh thận mạn tính sẵn có`. Các dòng mức con như `Da trắng`, `Mỹ gốc Phi`, `Đái tháo đường típ 1` hoặc `Giai đoạn 1 đến 3` không được lặp lại p-value.
+* **Không hiểu ô p-value trống là thiếu dữ liệu:** Ô p-value trống ở dòng mức con thể hiện rằng kiểm định được thực hiện cho toàn bộ biến phân loại, không phải kiểm định riêng từng mức con.
+* **Không lặp cùng một p-value xuống các dòng con:** Việc lặp p-value ở từng mức con dễ gây hiểu nhầm rằng từng dòng được kiểm định độc lập.
+
+## 7. Quy tắc xuống dòng trong ô bảng
+* **Dùng `<br>` khi ô cần nhiều dòng:** Với bảng cấu hình mô hình hoặc bảng có danh sách tham số, mỗi ý hoặc mỗi tham số nên được ngăn bằng `<br>` trong Markdown nguồn.
+* **Bảng cấu hình mô hình:** Cột `Cấu hình tham số chính` phải trình bày một tham số trên một dòng trong bản Word cuối cùng. Không để chuỗi dày đặc kiểu `key: value;key: value;key: value` trong DOCX.
+* **Không giả định `<br>` luôn render đúng trong Word:** Sau khi chuyển sang DOCX, phải kiểm tra theo quy tắc trong `docs/docx-conversion-rules.md` để bảo đảm `<br>` đã trở thành line break thật trong ô Word.
+
+## 8. Đồng bộ bảng, hình, caption và danh mục
+* **Tên trong danh mục phải khớp caption:** Mục trong `Danh mục bảng biểu` và `Danh mục hình vẽ` phải trùng với caption thực tế trong nội dung.
+* **Số thứ tự phải nhất quán:** Không bỏ qua hoặc lặp số bảng/hình.
+* **Tham chiếu trong nội dung:** Khi nhắc đến bảng hoặc hình trong đoạn văn, dùng đúng số và tên đã khai báo, ví dụ `Bảng 1` hoặc `Hình 4`.
+* **Quy tắc DOCX riêng:** Các yêu cầu về sequence field, danh mục tự động, chiều rộng cột, font bảng và kiểm tra render được quy định trong `docs/docx-conversion-rules.md`.
