@@ -46,7 +46,7 @@ title: "Ứng dụng học máy với thuật toán TabPFN-3 trong dự đoán y
 ```{=openxml}
 <w:p>
   <w:pPr>
-    <w:pStyle w:val="Heading1"/>
+    <w:pStyle w:val="TOCHeading"/>
   </w:pPr>
   <w:r>
     <w:t>Mục lục</w:t>
@@ -62,7 +62,7 @@ title: "Ứng dụng học máy với thuật toán TabPFN-3 trong dự đoán y
 </w:p>
 <w:p>
   <w:pPr>
-    <w:pStyle w:val="Heading1"/>
+    <w:pStyle w:val="TOCHeading"/>
   </w:pPr>
   <w:r>
     <w:t>Danh mục bảng biểu</w:t>
@@ -78,7 +78,7 @@ title: "Ứng dụng học máy với thuật toán TabPFN-3 trong dự đoán y
 </w:p>
 <w:p>
   <w:pPr>
-    <w:pStyle w:val="Heading1"/>
+    <w:pStyle w:val="TOCHeading"/>
   </w:pPr>
   <w:r>
     <w:t>Danh mục hình vẽ</w:t>
@@ -98,7 +98,7 @@ title: "Ứng dụng học máy với thuật toán TabPFN-3 trong dự đoán y
 
 # Tóm tắt
 
-Nhiễm toan ceton do đái tháo đường, thường gọi là DKA, là một biến chứng cấp tính và nghiêm trọng ở bệnh nhân tiểu đường, với khoảng 40–50% trường hợp tiến triển thành tổn thương thận cấp tính AKI. Nghiên cứu này phát triển một mô hình học máy để dự báo sớm nguy cơ AKI trong vòng một tuần ở bệnh nhân DKA nhập viện điều trị tích cực tại ICU dựa trên cơ sở dữ liệu y tế MIMIC-IV. Với cỡ mẫu thực tế gồm 970 bệnh nhân có nhãn lâm sàng đầy đủ, các đặc trưng có tỷ lệ thiếu trên 20% bị loại bỏ, và dữ liệu khuyết dưới mức này được xử lý nội suy bằng thuật toán lân cận gần nhất KNN. Hệ thống đã được thiết kế lại một cách chặt chẽ để loại bỏ nguy cơ rò rỉ dữ liệu y khoa bằng cách loại trừ hoàn toàn các thang điểm đánh giá mức độ nặng lâm sàng tổng hợp bao gồm SOFA, SAPS-II và OASIS khỏi tập các biến đầu vào. Dữ liệu được phân chia theo phương pháp phân tầng ngẫu nhiên với tỷ lệ 85/15 thành tập huấn luyện gồm 824 mẫu và tập kiểm thử độc lập sạch hoàn toàn gồm 146 mẫu. Phương pháp chọn lọc đặc trưng bằng trị số SHAP từ mô hình XGBoost cơ bản được áp dụng để chọn ra 20 đặc trưng tối ưu nhất trước khi huấn luyện 9 thuật toán học máy khác nhau. Kết quả thực nghiệm cho thấy mô hình nền tảng dữ liệu bảng TabPFN-3-Plus đạt hiệu suất cao nhất với chỉ số diện tích dưới đường cong AUC là 0,859 trên tập kiểm thử độc lập, theo sau bởi mô hình hồi quy Logistic đạt AUC là 0,839 và mô hình AdaBoost đạt AUC là 0,826. Phân tích độ đóng góp đặc trưng của mô hình TabPFN-3-Plus bằng phương pháp hoán vị đặc trưng chỉ ra rằng các yếu tố sinh lý cốt lõi cảnh báo sớm nguy cơ DKA-AKI hàng đầu bao gồm mức lọc cầu thận ước tính eGFR, nồng độ creatinine huyết thanh SCr, cân nặng, nồng độ urê máu BUN và điểm OASIS. Công trình thực nghiệm này cung cấp một mô hình dự báo sạch, tin cậy và chính xác về mặt lâm sàng, giúp nhận diện sớm nhóm bệnh nhân nguy cơ cao tại ICU để đưa ra can thiệp kịp thời.
+Nhiễm toan ceton do đái tháo đường, thường gọi là DKA, là một biến chứng cấp tính và nghiêm trọng ở bệnh nhân tiểu đường, với khoảng 40–50% trường hợp tiến triển thành tổn thương thận cấp tính AKI. Nghiên cứu này phát triển một mô hình học máy để dự báo sớm nguy cơ AKI trong vòng một tuần ở bệnh nhân DKA nhập viện điều trị tích cực tại ICU dựa trên cơ sở dữ liệu y tế MIMIC-IV. Với cỡ mẫu thực tế gồm 970 bệnh nhân có nhãn lâm sàng đầy đủ, các đặc trưng có tỷ lệ thiếu trên 20% bị loại bỏ, và dữ liệu khuyết dưới mức này được xử lý nội suy bằng thuật toán lân cận gần nhất KNN. Dữ liệu được phân chia theo phương pháp phân tầng ngẫu nhiên với tỷ lệ 85/15 thành tập huấn luyện gồm 824 mẫu và tập kiểm thử độc lập sạch hoàn toàn gồm 146 mẫu. Phương pháp chọn lọc đặc trưng bằng trị số SHAP từ mô hình XGBoost cơ bản được áp dụng để chọn ra 20 đặc trưng tối ưu nhất trước khi huấn luyện 9 thuật toán học máy khác nhau. Kết quả thực nghiệm cho thấy mô hình nền tảng dữ liệu bảng TabPFN-3-Plus đạt hiệu suất cao nhất với chỉ số diện tích dưới đường cong AUC là 0,859 trên tập kiểm thử độc lập, theo sau bởi mô hình hồi quy Logistic đạt AUC là 0,839 và mô hình AdaBoost đạt AUC là 0,826. Phân tích độ đóng góp đặc trưng của mô hình TabPFN-3-Plus bằng phương pháp hoán vị đặc trưng chỉ ra rằng các yếu tố sinh lý cốt lõi cảnh báo sớm nguy cơ DKA-AKI hàng đầu bao gồm mức lọc cầu thận ước tính eGFR, nồng độ creatinine huyết thanh SCr, cân nặng, nồng độ urê máu BUN và điểm OASIS. Công trình thực nghiệm này cung cấp một mô hình dự báo sạch, tin cậy và chính xác về mặt lâm sàng, giúp nhận diện sớm nhóm bệnh nhân nguy cơ cao tại ICU để đưa ra can thiệp kịp thời.
 
 
 # Các đóng góp chính của báo cáo
