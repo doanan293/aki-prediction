@@ -55,7 +55,7 @@ def plot_roc_split(roc_data, title, output_path="images/roc_comparison.png"):
     # Đường chéo nét đứt màu đỏ đất mờ theo bài báo
     plt.plot([0, 1], [0, 1], color="#C0392B", linestyle="--", alpha=0.7, linewidth=1.5)
 
-    plt.xlabel("Specificity", fontsize=14, fontweight="bold")
+    plt.xlabel("1 - Specificity", fontsize=14, fontweight="bold")
     plt.ylabel("Sensitivity", fontsize=14, fontweight="bold")
     plt.title(title, fontsize=16, fontweight="bold", pad=15)
     plt.legend(loc="lower right", fontsize=11, frameon=True, facecolor="white", edgecolor="lightgray")

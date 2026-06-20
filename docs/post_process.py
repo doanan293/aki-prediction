@@ -53,6 +53,10 @@ def _remove_bookmarks(root):
     for parent in root.iter():
         for child in list(parent):
             if child.tag in bookmark_tags:
+                name = child.get(_w("name")) or ""
+                # Giữ lại các bookmark của mục lục (_Toc) để tránh lỗi "Bookmark not defined"
+                if name.startswith("_Toc"):
+                    continue
                 parent.remove(child)
 
 

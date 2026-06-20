@@ -1,6 +1,9 @@
 import os
 from pathlib import Path
 
+# Vô hiệu hóa telemetry của TabPFN để tránh tiến trình bị treo khi kết xuất/tắt (analytics-python queue hangs)
+os.environ["TABPFN_DISABLE_TELEMETRY"] = "1"
+
 
 def _find_project_root() -> Path:
     """Walk up from this file's location to find the project root directory.
